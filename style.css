@@ -1,0 +1,155 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000814; 
+    color: #ffffff;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #000814;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+.short{
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #BDE8F5;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+
+.menu-icon {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+
+
+section {
+    width: 80%;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #143761;
+    border-radius: 10px;
+    opacity: 0.8;
+    transition: opacity 0.5s ease;
+}
+
+section {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+section h1,
+section h3,
+section h4,
+section h5 {
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+section p {
+    line-height: 1.6;
+    margin-bottom: 12px;
+    text-align: justify;
+    color: white;
+}
+
+
+
+section:hover {
+    opacity: 1;
+}
+
+
+#hero {
+    text-align: center;
+}
+
+#skills ul {
+    padding-left: 20px;
+}
+
+#skills li {
+    margin: 6px 0;
+}
+
+a {
+    color: #BDE8F5;
+}
+
+
+@keyframes fadeLoop {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+
+@media (max-width: 768px) {
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #000814;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        padding: 20px 0;
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex;
+    }
+
+    section {
+        width: 90%;
+    }
+}
